@@ -1,0 +1,259 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+.happiness__header {
+  width: 100%;
+  height: 8rem;
+  box-shadow: 0rem 0rem 2rem 0.1rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.happiness__icon {
+  font-size: 2.5rem;
+}
+
+.happiness {
+  width: 100%;
+  min-height: calc(100vh - 8rem - 5rem);
+  display: flex;
+  padding: 4rem;
+}
+.happiness__section {
+  width: 100%;
+  height: 100%;
+}
+.happiness__section--left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.happiness__section--right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.happiness__ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+.happiness__li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  width: 38%;
+  height: 40%;
+}
+.happiness__li:hover {
+  cursor: pointer;
+}
+.happiness__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.happiness__p {
+  position: absolute;
+  color: black;
+}
+.happiness__p--date {
+  top: 1%;
+  right: 1%;
+}
+.happiness__p--title {
+  bottom: 1%;
+}
+.happiness .rightside__ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+}
+.happiness .rightside__li {
+  list-style: none;
+}
+.happiness .rightside__li:nth-child(1) {
+  width: 90%;
+  height: 45%;
+  position: relative;
+}
+.happiness .rightside__li:nth-child(2) {
+  width: 90%;
+  margin-bottom: 2%;
+}
+.happiness .rightside__li:nth-child(3) {
+  width: 90%;
+}
+.happiness .rightside__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.happiness .rightside__p {
+  color: black;
+}
+.happiness .rightside__p--date {
+  top: 1%;
+  right: 1%;
+  position: absolute;
+}
+.happiness .rightside__p--title {
+  bottom: 1%;
+  position: absolute;
+}
+.happiness .rightside__group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.happiness .rightside__download {
+  font-family: "Ubuntu", sans-serif;
+  width: 20rem;
+  height: 3rem;
+  background: red;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+.happiness .rightside__download:hover {
+  cursor: pointer;
+  color: white;
+  background: rgb(224, 6, 6);
+}
+.happiness .rightside__link {
+  text-decoration: none;
+  color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}
+
+@media screen and (max-width: 62.5rem) {
+  .happiness {
+    flex-direction: column-reverse;
+    height: unset;
+    gap: 2rem;
+  }
+  .happiness .detail__li:nth-child(2) {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 59.375rem) {
+  .happiness__h1 {
+    font-size: 120%;
+  }
+  .happiness__icon {
+    font-size: 3rem;
+  }
+  .happiness .detail__p--date {
+    font-size: 85%;
+  }
+  .happiness .detail__p--title {
+    font-size: 85%;
+  }
+  .happiness .detail__p--summary {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 43.75rem) {
+  .happiness__ul {
+    padding: unset;
+    width: 90%;
+  }
+  .happiness__ul {
+    width: 90%;
+  }
+  .happiness__p--date {
+    font-size: 80%;
+  }
+  .happiness__p--title {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 85%;
+  }
+  .happiness__p--summary {
+    font-size: 70%;
+  }
+  .footer__p {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .happiness__h1 {
+    font-size: 120%;
+  }
+  .happiness__ul {
+    width: 100%;
+  }
+  .happiness .detail__ul {
+    width: 100%;
+  }
+  .happiness .detail__p--date {
+    font-size: 70%;
+  }
+  .happiness .detail__p--text {
+    margin-bottom: 1rem;
+  }
+  .happiness .detail__group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .happiness .detail__download {
+    font-size: 90%;
+  }
+  .happiness .detail__link {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 31.25rem) {
+  .happiness__p--date {
+    display: none;
+  }
+  .happiness__p--title {
+    display: none;
+  }
+  .happiness .detail__p--date {
+    display: none;
+  }
+  .happiness .detail__p--title {
+    display: none;
+  }
+  .footer__p {
+    font-size: 80%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,180 @@
+
+@use "../abstract/variables";
+
+@media screen and (max-width: 62.5rem) {
+
+
+    .happiness {
+        flex-direction: column-reverse;
+        height: unset;
+        gap: 2rem;
+
+        .detail {
+
+            &__li {
+
+                &:nth-child(2) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 59.375rem) {
+
+
+    .happiness {
+        &__h1 {
+            font-size: map-get(variables.$fontSizeMedia
+950, "h1");
+        }
+
+        &__icon{
+            font-size: 3rem;
+        }
+
+        .detail {
+
+            &__p {
+
+                &--date {
+                    font-size: map-get(variables.$da950, "imgtext");
+                }
+
+                &--title {
+                    font-size: map-get(variables.$da950, "imgtext");
+                }
+
+                &--summary{
+                    font-size: map-get(variables.$da950, "summary");
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 43.75rem) { 
+
+    .happiness{
+
+        &__ul{
+            padding: unset;
+            width: 90%;
+        }
+
+
+        &__ul{
+            width: 90%;
+        }
+
+        &__p {
+
+            &--date{
+                font-size: map-get(variables.$da700, "date");
+            }
+
+            &--title {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                font-size: map-get(variables.$da700, "title");
+            }
+
+            &--summary{
+                font-size: map-get(variables.$da700, "summary");
+            }
+        }
+    
+    }
+
+    .footer{
+        &__p{
+            font-size: map-get(variables.$footerMedia, "footer90");
+        }
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+
+    
+    .happiness {
+
+        &__h1 {
+            font-size: map-get(variables.$da600, "h1" );
+        }
+
+        &__ul{
+            width: 100%;
+        }
+
+        .detail {
+
+            &__ul{
+                width: 100%;
+            }
+
+            &__p--date {
+                font-size: map-get(variables.$fda600, "pDate");
+            }
+    
+            &__p--text {
+                margin-bottom: 1rem;
+            }
+    
+            &__group {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 1rem;
+            }
+    
+            &__download{
+                font-size: 90%;
+            }
+
+            &__link{
+                font-size: 90%;
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (max-width: 31.25rem) {  
+
+    .happiness{
+
+        &__p{
+
+            &--date{
+                display: none;
+            }
+
+            &--title {
+                display: none;
+            }
+        }
+        
+
+        .detail {
+
+            &__p--date {
+                display: none;
+            }
+    
+            &__p--title {
+                display: none;
+            }
+        }
+    }
+
+
+    .footer{
+        &__p{
+            font-size: map-get(variables.$footerMedia, "footer80");
+        }
+    }
+}
