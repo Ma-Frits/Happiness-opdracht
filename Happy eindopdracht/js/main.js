@@ -171,26 +171,20 @@ class LeftSection {
     }
 }
 class Footer {
-    placeToRenderFooter;
-    footer;
-    footerP;
-
     constructor(placeToRenderFooter) {
-        this.placeToRenderFooter = document.getElementsByTagName(placeToRenderFooter)[0];
-
-        this.footer = document.createElement("footer");
-        this.footer.classList = "footer";
-
-        this.footerP = document.createElement("p");
-        this.footerP.classList = "footer__p";
-        this.footerP.innerText = "Gemaakt door: Frits Bien";
+      this.placeToRenderFooter = document.querySelector(placeToRenderFooter);
+      this.footer = document.createElement("footer");
+      this.footer.classList.add("footer");
+      this.footerP = document.createElement("p");
+      this.footerP.classList.add("footer__p");
+      this.footerP.textContent = "Gemaakt door: Frits Bien";
     }
-
+  
     render() {
-        this.placeToRenderFooter.appendChild(this.footer);
-        this.footer.appendChild(this.footerP);
+      this.placeToRenderFooter.appendChild(this.footer);
+      this.footer.appendChild(this.footerP);
     }
-}
+  }
 
 class RightsideCard {
     happyRightSection;
